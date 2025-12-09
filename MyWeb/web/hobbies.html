@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>兴趣爱好 — 许皓轩</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;margin:0;color:#333;background:#f8f9fa}
+.container{width:90%;max-width:1000px;margin:0 auto;padding:24px}
+header{background:#2c3e50;color:#fff;padding:12px}
+.feature-card{background:#fff;padding:16px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.06);margin-bottom:16px}
+.back{display:inline-block;margin-bottom:12px;color:#3498db;text-decoration:none}
+
+/* 书籍展示 */
+.book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:12px}
+.book-card{background:#fff;border-radius:8px;padding:8px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.04)}
+.book-card img{width:100%;height:220px;object-fit:cover;border-radius:6px}
+.book-card h5{margin:8px 0 4px;font-size:0.95rem}
+.book-card p{margin:0;font-size:0.85rem;color:#666}
+
+/* 网络游戏画廊：上两张小图并排，底下一张大图，整体宽度与阅读栏相近 */
+.game-gallery{display:flex;flex-direction:column;gap:12px;margin-top:12px;max-width:100%}
+.game-gallery .top-row{display:flex;gap:8px}
+.game-gallery .top-row a{width:49%}
+.game-gallery .top-row img{width:100%;height:140px;object-fit:cover;border-radius:6px;display:block}
+.game-gallery .bottom-row a{display:block;width:100%}
+.game-gallery .bottom-row img{width:100%;height:240px;object-fit:cover;object-position:top center;border-radius:6px;display:block}
+
+/* 保持与书籍栏在小屏下一致 */
+@media (max-width:480px){
+  .book-card img{height:160px}
+  .game-gallery .top-row img{height:110px}
+  .game-gallery .bottom-row img{height:140px;object-position:top center}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div><h2 style="margin:0">兴趣爱好</h2></div>
+    <nav><a href="/sakura-ad0013.github.io/index.html" style="color:#fff;text-decoration:none"><i class="fas fa-home"></i> 返回首页</a></nav>
+  </div>
+</header>
+
+<main class="container">
+  <a class="back" href="../index.html">&larr; 返回首页</a>
+
+  <article class="feature-card">
+    <h3>音乐</h3>
+    <p>介绍：喜欢听音乐并尝试简单编曲。音乐为开发与学习提供灵感，有助于保持专注。</p>
+    <p>工具/平台：常用音乐平台、简单的 DAW。</p>
+  </article>
+
+  <!-- 阅读（含轻小说） -->
+  <article class="feature-card">
+    <h3>阅读</h3>
+    <p>介绍：喜欢阅读技术与文学书籍，通过阅读拓展视野并提升写作与思考能力。</p>
+    <h4>推荐书单</h4>
+
+    <div class="book-grid">
+      <div class="book-card">
+        <img src="/sakura-ad0013.github.io/images/books/hongloumeng.jpg" alt="红楼梦 - 曹雪芹">
+        <h5>红楼梦</h5>
+        <p>曹雪芹</p>
+      </div>
+      <div class="book-card">
+        <img src="/sakura-ad0013.github.io/images/books/one_hundred_years.jpg" alt="百年孤独 - 加西亚·马尔克斯">
+        <h5>百年孤独</h5>
+        <p>加西亚·马尔克斯</p>
+      </div>
+      <div class="book-card">
+        <img src="/sakura-ad0013.github.io/images/books/1984.jpg" alt="1984 - 乔治·奥威尔">
+        <h5>1984</h5>
+        <p>乔治·奥威尔</p>
+      </div>
+      <div class="book-card">
+        <img src="/sakura-ad0013.github.io/images/books/gatsby.jpg" alt="了不起的盖茨比 - F. 斯科特·菲茨杰拉德">
+        <h5>了不起的盖茨比</h5>
+        <p>F. 斯科特·菲茨杰拉德</p>
+      </div>
+      <div class="book-card">
+        <img src="/sakura-ad0013.github.io/images/books/kite_runner.jpg" alt="追风筝的人 - 卡勒德·胡赛尼">
+        <h5>追风筝的人</h5>
+        <p>卡勒德·胡赛尼</p>
+      </div>
+    </div>
+
+    <h4 style="margin-top:14px;">轻小说</h4>
+    <div class="book-grid" style="margin-top:8px;">
+      <div class="book-card">
+        <img src="../images/ln/qin_ai_de_fayi_xiaojie.jpg" alt="我亲爱的法医小姐">
+        <h5>我亲爱的法医小姐</h5>
+        <p>轻小说 / 小说</p>
+      </div>
+      <div class="book-card">
+        <img src="../images/ln/xindong_de_fenbei.jpg" alt="心动的分贝">
+        <h5>心动的分贝</h5>
+        <p>轻小说 / 小说</p>
+      </div>
+      <div class="book-card">
+        <img src="../images/ln/ta_de_shan_ta_de_hai.jpg" alt="她的山她的海">
+        <h5>她的山她的海</h5>
+        <p>轻小说 / 小说</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- 新增：网络游戏栏（三张图片为可跳转按钮） -->
+  <article class="feature-card">
+    <h3>网络游戏</h3>
+    <div class="game-gallery" aria-hidden="false">
+      <div class="top-row">
+        <img src="/sakura-ad0013.github.io/images/games/g1.jpg" alt="原神">
+        <img src="/sakura-ad0013.github.io/images/games/g2.jpg" alt="崩坏：星穹铁道">
+      </div>
+      <div class="bottom-row">
+        <img src="/sakura-ad0013.github.io/images/games/g3.jpg" alt="武器迷途">
+      </div>
+    </div>
+  </article>
+</main>
+</body>
+</html>
