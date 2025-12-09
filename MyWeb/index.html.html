@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>许皓轩 的个人空间 | 主页</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== 合并的 CSS（精简自原样式） ===== */
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary-color:#2c3e50;--secondary-color:#3498db;--accent-color:#e74c3c;--light-color:#f8f9fa;--dark-color:#2c3e50;--text-color:#333;--text-light:#666;--shadow:0 5px 15px rgba(0,0,0,0.1);--transition:all .3s ease;}
+        html{scroll-behavior:smooth}
+        body{font-family:'Segoe UI','Microsoft YaHei',sans-serif;line-height:1.6;color:var(--text-color);background:var(--light-color)}
+        .container{width:90%;max-width:1200px;margin:0 auto;padding:0 15px}
+        header{background:var(--primary-color);color:#fff;padding:1rem 0;position:sticky;top:0;z-index:1000;box-shadow:var(--shadow)}
+        header .container{display:flex;justify-content:space-between;align-items:center}
+        /* logo 区域：头像已移至标题前，保持垂直居中 */
+        .logo{display:flex;align-items:center;gap:.6rem}
+        .nav-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.18);box-shadow:0 6px 16px rgba(0,0,0,0.12)}
+        .logo h1{font-size:1.3rem;display:flex;align-items:center;gap:.5rem;margin:0}
+        .logo i{color:var(--secondary-color);display:none} /* 隐藏原图标，使用头像替代 */
+        nav ul{display:flex;list-style:none;gap:1.5rem}
+        nav ul li a{color:#fff;text-decoration:none;padding:.5rem 1rem;border-radius:4px;display:flex;align-items:center;gap:.5rem;transition:var(--transition)}
+        nav ul li a:hover,nav ul li a.active{background:var(--secondary-color);color:#fff}
+        .menu-toggle{display:none;cursor:pointer;font-size:1.5rem}
+        .hero{
+            padding:4rem 0;
+            /* 使用第二张图片作为背景，露出上半部分白云 */
+            background-image:
+                linear-gradient(rgba(44,62,80,0.5), rgba(44,62,80,0.25)),
+                url('images/bg2.jpg');
+            background-repeat: no-repeat;
+            background-position: center top; /* 主要露出上半部分（白云） */
+            background-size: cover; /* 等比放大并裁剪以填满区域 */
+            color: #fff;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+         }
+        .hero .container{display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:center}
+        .hero-content h2{font-size:2.2rem;margin-bottom:1rem}
+        .subtitle{font-size:1.05rem;opacity:.95;margin-bottom:1rem}
+        .cta-buttons{display:flex;gap:1rem;margin-top:1.5rem}
+        .btn{display:inline-block;padding:.7rem 1.6rem;border-radius:5px;font-weight:600;text-decoration:none;transition:var(--transition)}
+        .primary-btn{background:var(--accent-color);color:#fff}
+        .secondary-btn{background:transparent;color:#fff;border:2px solid #fff}
+        .features{padding:3.5rem 0;background:#fff}
+        .section-title{text-align:center;font-size:2rem;margin-bottom:1rem;color:var(--dark-color)}
+        .section-subtitle{text-align:center;color:var(--text-light);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:1.5rem}
+        .feature-card{background:var(--light-color);padding:1.6rem;border-radius:10px;text-align:center;box-shadow:var(--shadow);transition:var(--transition);border-top:4px solid var(--secondary-color)}
+        .feature-card a{color:inherit;text-decoration:none;display:block}
+        .feature-icon{font-size:2.2rem;color:var(--secondary-color);margin-bottom:1rem}
+        footer{background:var(--primary-color);color:#fff;padding:2rem 0 1rem}
+        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-bottom:1rem}
+        .social-icons{display:flex;gap:.6rem}
+        .social-icons a{color:#fff;background:rgba(255,255,255,.08);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+        @media (max-width:900px){.menu-toggle{display:block}.menu-toggle i{color:#fff}nav ul{position:fixed;top:64px;right:0;background:var(--primary-color);height:calc(100% - 64px);flex-direction:column;padding:1rem;gap:0;transform:translateX(100%);transition:transform .25s ease}nav ul.show{transform:translateX(0)}nav ul li a{padding:1rem 1.2rem}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- 头像放在标题前，大小与文字区域匹配 -->
+                <img src="images/avatar.png" alt="头像 — 许皓轩" class="nav-avatar">
+                <h1>我的个人空间</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="index.html#about"><i class="fas fa-user"></i> 关于我</a></li>
+                    <li><a href="web/portfolio.html"><i class="fas fa-briefcase"></i> 作品集</a></li>
+                    <li><a href="web/hobbies.html"><i class="fas fa-heart"></i> 兴趣爱好</a></li>
+                    <li><a href="web/updates.html"><i class="fas fa-bullhorn"></i> 最新动态</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-envelope"></i> 联系我</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu" aria-label="切换菜单"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>欢迎来到我的个人空间</h2>
+                    <p class="subtitle">我是 许皓轩，华中科技大学 计算机科学与技术 专业 2508 班的学生。</p>
+                    <p>这里记录我的学习成果与作品，包含网页设计、前端开发与兴趣分享。</p>
+                    <div class="cta-buttons">
+                        <a href="web/portfolio.html" class="btn primary-btn">查看作品</a>
+                        <a href="web/hobbies.html" class="btn secondary-btn">了解兴趣</a>
+                    </div>
+                </div>
+                <!-- 头像已移至顶部 logo 区域 -->
+            </div>
+        </section>
+
+        <!-- 概览卡：点击跳转到独立页面 -->
+        <section class="features" style="padding-top:2rem;padding-bottom:2rem;">
+            <div class="container">
+                <h2 class="section-title">快速入口</h2>
+                <p class="section-subtitle">点击任意卡片查看详细页面</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <a href="web/portfolio.html">
+                            <div class="feature-icon"><i class="fas fa-code"></i></div>
+                            <h3>技术作品</h3>
+                            <p>查看我的课程项目与个人作品，包含源码说明与演示截图。</p>
+                        </a>
+                    </div>
+                    <div class="feature-card">
+                        <a href="web/hobbies.html">
+                            <div class="feature-icon"><i class="fas fa-book"></i></div>
+                            <h3>兴趣爱好</h3>
+                            <p>了解我的课余兴趣：音乐、阅读等，以及我从中得到的灵感。</p>
+                        </a>
+                    </div>
+                    <div class="feature-card">
+                        <a href="web/updates.html">
+                            <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+                            <h3>最新动态</h3>
+                            <p>项目进展、课程成果与学习笔记的时间线记录。</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我（保留） -->
+        <section id="about" class="features">
+            <div class="container">
+                <h2 class="section-title">关于我</h2>
+                <p class="section-subtitle">个人简介与学习背景</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>教育信息</h3>
+                        <p>许皓轩 — 华中科技大学，计算机科学与技术专业，2508 班。热爱前端开发与界面设计，积极参与课程项目与竞赛。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>技能</h3>
+                        <p>HTML、CSS、JavaScript，基础后端与数据结构。熟悉响应式布局与交互效果实现。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-palette"></i></div>
+                        <h3>风格</h3>
+                        <p>偏好简洁实用的界面设计，注重可用性与可维护性。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系表单 -->
+        <section id="contact" class="features" style="padding-top:2rem;padding-bottom:2.5rem;">
+            <div class="container">
+                <h2 class="section-title">联系我</h2>
+                <p class="section-subtitle">有任何问题或合作意向，请留下消息</p>
+                <div class="page-content">
+                    <div class="content-block" style="padding:1.2rem;">
+                        <form id="contactForm" novalidate>
+                            <div class="form-group" style="margin-bottom:.8rem;">
+                                <label for="name">姓名</label><br>
+                                <input id="name" name="name" type="text" style="width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px;">
+                            </div>
+                            <div class="form-group" style="margin-bottom:.8rem;">
+                                <label for="email">邮箱</label><br>
+                                <input id="email" name="email" type="email" style="width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px;">
+                            </div>
+                            <div class="form-group" style="margin-bottom:.8rem;">
+                                <label for="message">留言</label><br>
+                                <textarea id="message" name="message" rows="5" style="width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px;"></textarea>
+                            </div>
+                            <button type="submit" class="btn primary-btn" style="border:none;">发送留言</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>我的个人空间</h3>
+                    <p>一个展示学习成果、分享创作和记录成长的地方。积极向上，追求卓越。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="web/portfolio.html">作品集</a></li>
+                        <li><a href="web/hobbies.html">兴趣爱好</a></li>
+                        <li><a href="web/updates.html">最新动态</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:3569935171@qq.com" style="color:inherit;text-decoration:underline;">3569935171@qq.com</a></li>
+                        <li><i class="fas fa-school"></i> 华中科技大学 计算机科学与技术 2508 班</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;border-top:1px solid rgba(255,255,255,.08);padding-top:1rem">
+                <p style="opacity:.8;font-size:.95rem;">&copy; <span class="current-year">2025</span> 许皓轩 的个人空间. 本网站为网页设计课程作业，内容原创。</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="微信"><i class="fab fa-weixin"></i></a>
+                    <a href="#" aria-label="学习平台"><i class="fas fa-graduation-cap"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    /* 简单复用的脚本：菜单、表单、年份 */
+    document.addEventListener('DOMContentLoaded', function(){ initMobileMenu(); initFormValidation(); updateCurrentYear(); });
+    function initMobileMenu(){ const menuToggle=document.querySelector('.menu-toggle'); const navMenu=document.querySelector('nav ul'); if(!menuToggle||!navMenu) return; menuToggle.addEventListener('click',function(){ navMenu.classList.toggle('show'); const icon=this.querySelector('i'); if(icon) icon.classList.toggle('fa-times'); icon.classList.toggle('fa-bars'); }); document.querySelectorAll('nav ul li a').forEach(a=>a.addEventListener('click',()=>{ if(window.innerWidth<=900) navMenu.classList.remove('show'); })); }
+    function initFormValidation(){ const contactForm=document.getElementById('contactForm'); if(!contactForm) return; contactForm.addEventListener('submit',function(e){ e.preventDefault(); alert('已发送（示例）'); contactForm.reset(); }); }
+    function updateCurrentYear(){ document.querySelectorAll('.current-year').forEach(el=>el.textContent=new Date().getFullYear()); }
+    </script>
+</body>
+</html>
